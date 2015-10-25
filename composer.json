@@ -1,0 +1,20 @@
+{
+    "name": "northwoods/cookcountycommunityfund",
+    "description": "CCCF information and non-profit directory",
+    "type": "project",
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "Woody Gilk",
+            "email": "woody.gilk@gmail.com"
+        }
+    ],
+    "require": {
+        "sparkphp/spark": "^0.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Spark\\Project\\": "src/"
+        }
+    }
+}
