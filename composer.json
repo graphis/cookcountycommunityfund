@@ -10,11 +10,12 @@
         }
     ],
     "require": {
-        "sparkphp/spark": "^0.6"
+        "sparkphp/spark": "^0.6",
+        "league/plates": "^3.1"
     },
     "autoload": {
         "psr-4": {
-            "Spark\\Project\\": "src/"
+            "Northwoods\\CCCF\\": "src/"
         }
     }
 }
