@@ -1,4 +1,17 @@
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
-  padding-top: 2rem;
+    padding-top: 3.2rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container.board .row {
+    padding-bottom: 3rem;
+}
+
+.container.alumni .row {
+    padding-top: 1rem;
+    color: #555;
 }

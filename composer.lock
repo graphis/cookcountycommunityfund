@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1e40a509cea5148564040efa80e1d320",
-    "content-hash": "a81d4c159bccb9d8f52fd3d4dd7d6210",
+    "hash": "00d965a056317a3a2e3084a0f065b904",
+    "content-hash": "d19cbea3daf1ca9d93c6ad89fd4b8cc0",
     "packages": [
         {
             "name": "arbiter/arbiter",
@@ -53,6 +53,118 @@
                 "psr-7"
             ],
             "time": "2015-06-25 14:21:40"
+        },
+        {
+            "name": "destrukt/destrukt",
+            "version": "0.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/destruktphp/destrukt.git",
+                "reference": "277abd5b4f4acb81cc234351b952b655ff86f1a4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/destruktphp/destrukt/zipball/277abd5b4f4acb81cc234351b952b655ff86f1a4",
+                "reference": "277abd5b4f4acb81cc234351b952b655ff86f1a4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "replace": {
+                "shadowhand/destrukt": "self.version"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8",
+                "satooshi/php-coveralls": "^0.6.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Destrukt\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Destrukt Contributors",
+                    "homepage": "https://github.com/sparkphp/spark/graphs/contributors"
+                }
+            ],
+            "description": "Simple, immutable data structures",
+            "keywords": [
+                "data structure",
+                "dictionary",
+                "hash map",
+                "hash table",
+                "immutable",
+                "list",
+                "ordered list",
+                "set",
+                "unordered list"
+            ],
+            "time": "2015-12-31 19:45:48"
+        },
+        {
+            "name": "filp/whoops",
+            "version": "1.1.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/filp/whoops.git",
+                "reference": "72538eeb70bbfb11964412a3d098d109efd012f7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/72538eeb70bbfb11964412a3d098d109efd012f7",
+                "reference": "72538eeb70bbfb11964412a3d098d109efd012f7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Whoops": "src/"
+                },
+                "classmap": [
+                    "src/deprecated"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Filipe Dobreira",
+                    "homepage": "https://github.com/filp",
+                    "role": "Developer"
+                }
+            ],
+            "description": "php error handling for cool kids",
+            "homepage": "https://github.com/filp/whoops",
+            "keywords": [
+                "error",
+                "exception",
+                "handling",
+                "library",
+                "silex-provider",
+                "whoops",
+                "zf2"
+            ],
+            "time": "2015-06-29 05:42:04"
         },
         {
             "name": "league/plates",
@@ -108,16 +220,16 @@
         },
         {
             "name": "nikic/fast-route",
-            "version": "v0.6.0",
+            "version": "v0.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/FastRoute.git",
-                "reference": "31fa86924556b80735f98b294a7ffdfb26789f22"
+                "reference": "8164b4a0d8afde4eae5f1bfc39084972ba23ad36"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/FastRoute/zipball/31fa86924556b80735f98b294a7ffdfb26789f22",
-                "reference": "31fa86924556b80735f98b294a7ffdfb26789f22",
+                "url": "https://api.github.com/repos/nikic/FastRoute/zipball/8164b4a0d8afde4eae5f1bfc39084972ba23ad36",
+                "reference": "8164b4a0d8afde4eae5f1bfc39084972ba23ad36",
                 "shasum": ""
             },
             "require": {
@@ -147,7 +259,7 @@
                 "router",
                 "routing"
             ],
-            "time": "2015-06-18 19:15:47"
+            "time": "2015-12-20 19:50:12"
         },
         {
             "name": "psr/http-message",
@@ -294,16 +406,16 @@
         },
         {
             "name": "relay/relay",
-            "version": "0.2.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/relayphp/Relay.Relay.git",
-                "reference": "6f1f1e2392ea690d8d4402495d1104017bfa9062"
+                "reference": "e835fc45351b7a92a6fdf2a36be7bd59ef56c8ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/relayphp/Relay.Relay/zipball/6f1f1e2392ea690d8d4402495d1104017bfa9062",
-                "reference": "6f1f1e2392ea690d8d4402495d1104017bfa9062",
+                "url": "https://api.github.com/repos/relayphp/Relay.Relay/zipball/e835fc45351b7a92a6fdf2a36be7bd59ef56c8ae",
+                "reference": "e835fc45351b7a92a6fdf2a36be7bd59ef56c8ae",
                 "shasum": ""
             },
             "require": {
@@ -335,25 +447,27 @@
                 "middleware",
                 "psr-7"
             ],
-            "time": "2015-06-25 14:27:22"
+            "time": "2015-12-17 18:18:30"
         },
         {
             "name": "sparkphp/adr",
-            "version": "v0.2.3",
+            "version": "0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sparkphp/adr.git",
-                "reference": "7facb9b3f7f1aa5e100854c65cf8490aeb624f19"
+                "reference": "ab8c7c40fe2d018e7a51b0059060f5e2badb582a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sparkphp/adr/zipball/7facb9b3f7f1aa5e100854c65cf8490aeb624f19",
-                "reference": "7facb9b3f7f1aa5e100854c65cf8490aeb624f19",
+                "url": "https://api.github.com/repos/sparkphp/adr/zipball/ab8c7c40fe2d018e7a51b0059060f5e2badb582a",
+                "reference": "ab8c7c40fe2d018e7a51b0059060f5e2badb582a",
                 "shasum": ""
             },
             "require": {
-                "psr/http-message": "^1.0",
-                "sparkphp/domain": "~0.2"
+                "psr/http-message": "^1.0"
+            },
+            "conflict": {
+                "sparkphp/domain": "*"
             },
             "type": "library",
             "autoload": {
@@ -376,74 +490,40 @@
                 }
             ],
             "description": "Interfaces for Action Domain Responder pattern",
-            "time": "2015-08-26 15:42:52"
-        },
-        {
-            "name": "sparkphp/domain",
-            "version": "v0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sparkphp/domain.git",
-                "reference": "ce8896bfaf7628874c1f2fc23f43e05c185bd516"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sparkphp/domain/zipball/ce8896bfaf7628874c1f2fc23f43e05c185bd516",
-                "reference": "ce8896bfaf7628874c1f2fc23f43e05c185bd516",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Spark\\Adr\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Woody Gilk",
-                    "email": "woody.gilk@gmail.com"
-                },
-                {
-                    "name": "Daniel Olfelt",
-                    "email": "dolfelt@gmail.com"
-                }
-            ],
-            "description": "Interfaces for Domain and Payload pattern",
-            "time": "2015-08-26 15:41:46"
+            "time": "2015-12-16 14:13:59"
         },
         {
             "name": "sparkphp/spark",
-            "version": "v0.6.0",
+            "version": "0.16.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sparkphp/spark.git",
-                "reference": "cfd85e9edb488c07e3b511cb24977e9bfb46a91b"
+                "reference": "003b5e5a2aeb810664f4099f8ccc59e20462649a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sparkphp/spark/zipball/cfd85e9edb488c07e3b511cb24977e9bfb46a91b",
-                "reference": "cfd85e9edb488c07e3b511cb24977e9bfb46a91b",
+                "url": "https://api.github.com/repos/sparkphp/spark/zipball/003b5e5a2aeb810664f4099f8ccc59e20462649a",
+                "reference": "003b5e5a2aeb810664f4099f8ccc59e20462649a",
                 "shasum": ""
             },
             "require": {
-                "arbiter/arbiter": "~0.1",
-                "nikic/fast-route": "~0.6",
+                "arbiter/arbiter": "^0.1",
+                "destrukt/destrukt": "^0.7.1",
+                "filp/whoops": "^1.1",
+                "nikic/fast-route": "^0.7",
                 "php": ">=5.5.0",
-                "rdlowrey/auryn": "~1.0",
-                "relay/middleware": "~0.1",
-                "relay/relay": "~0.2",
-                "sparkphp/adr": "~0.2",
-                "willdurand/negotiation": "~1.4",
-                "zendframework/zend-diactoros": "~1.0"
+                "rdlowrey/auryn": "^1.1",
+                "relay/middleware": "^0.1",
+                "relay/relay": "^1.1",
+                "sparkphp/adr": "^0.4",
+                "willdurand/negotiation": "^2.0",
+                "zendframework/zend-diactoros": "^1.0.4"
             },
             "require-dev": {
-                "league/plates": "~3.1",
-                "phpunit/phpunit": "~4.8",
-                "satooshi/php-coveralls": "~0.6"
+                "josegonzalez/dotenv": "^1.2",
+                "league/plates": "^3.1",
+                "phpunit/phpunit": "^4.8|^5.0",
+                "satooshi/php-coveralls": "^1.0"
             },
             "suggest": {
                 "josegonzalez/dotenv": "For environment based configuration loading",
@@ -470,29 +550,29 @@
                 }
             ],
             "description": "A tiny framework that can start anything.",
-            "time": "2015-10-19 15:25:18"
+            "time": "2015-12-31 22:20:07"
         },
         {
             "name": "willdurand/negotiation",
-            "version": "1.5.0",
+            "version": "v2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/willdurand/Negotiation.git",
-                "reference": "2a59f2376557303e3fa91465ab691abb82945edf"
+                "reference": "a8ce6da7acdf07351ccd6a9359c571ebc0725a21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/willdurand/Negotiation/zipball/2a59f2376557303e3fa91465ab691abb82945edf",
-                "reference": "2a59f2376557303e3fa91465ab691abb82945edf",
+                "url": "https://api.github.com/repos/willdurand/Negotiation/zipball/a8ce6da7acdf07351ccd6a9359c571ebc0725a21",
+                "reference": "a8ce6da7acdf07351ccd6a9359c571ebc0725a21",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": ">=5.4.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.5-dev"
+                    "dev-master": "2.0-dev"
                 }
             },
             "autoload": {
@@ -507,7 +587,7 @@
             "authors": [
                 {
                     "name": "William Durand",
-                    "email": "william.durand1@gmail.com"
+                    "email": "will+git@drnd.me"
                 }
             ],
             "description": "Content Negotiation tools for PHP provided as a standalone library.",
@@ -519,20 +599,20 @@
                 "header",
                 "negotiation"
             ],
-            "time": "2015-10-01 07:42:40"
+            "time": "2015-11-21 14:23:02"
         },
         {
             "name": "zendframework/zend-diactoros",
-            "version": "1.1.4",
+            "version": "1.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-diactoros.git",
-                "reference": "3f0ce6c0ba2106e018fb514a9f09dbb91eb6bfd0"
+                "reference": "4b0e6b9122b9df484a3b2e15e4fd88aa7d8861ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/3f0ce6c0ba2106e018fb514a9f09dbb91eb6bfd0",
-                "reference": "3f0ce6c0ba2106e018fb514a9f09dbb91eb6bfd0",
+                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/4b0e6b9122b9df484a3b2e15e4fd88aa7d8861ad",
+                "reference": "4b0e6b9122b9df484a3b2e15e4fd88aa7d8861ad",
                 "shasum": ""
             },
             "require": {
@@ -549,8 +629,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev",
-                    "dev-develop": "1.1-dev"
+                    "dev-master": "1.3-dev",
+                    "dev-develop": "1.4-dev"
                 }
             },
             "autoload": {
@@ -569,7 +649,7 @@
                 "psr",
                 "psr-7"
             ],
-            "time": "2015-10-16 15:24:05"
+            "time": "2015-12-22 22:44:06"
         }
     ],
     "packages-dev": [],

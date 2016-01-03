@@ -2,13 +2,13 @@
 
 namespace Northwoods\CCCF\Domain;
 
-class About extends Domain
+class Board extends Domain
 {
     public function __invoke(array $input)
     {
         return $this->payload()->withOutput([
-            'active' => 'about',
-            'template' => 'about',
+            'active' => 'board',
+            'template' => 'board',
         ]);
     }
 }

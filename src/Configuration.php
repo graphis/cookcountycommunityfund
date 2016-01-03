@@ -3,21 +3,37 @@
 namespace Northwoods\CCCF;
 
 use Auryn\Injector;
+use League\Plates\Engine;
+use Spark\Directory;
+use Spark\Configuration\ConfigurationInterface;
 
-class Configuration
+class Configuration implements ConfigurationInterface
 {
     public function apply(Injector $injector)
     {
-        // Expect HTML using Plates
-        $injector->prepare('Spark\Responder\FormattedResponder', function ($responder) {
-            return $responder->withFormatters([
-                'Spark\Formatter\PlatesFormatter' => '1.0',
-            ]);
-        });
-
         // Configure Plates template directory
-        $injector->define('League\Plates\Engine', [
+        $injector->define(Engine::class, [
             ':directory' => __DIR__ . '/../templates',
         ]);
+
+        $injector->prepare(Engine::class, [$this, 'prepareTemplates']);
+    }
+
+    protected function getPages()
+    {
+        return [
+            '/' => 'About',
+            '/board' => 'Board',
+            '/directory' => 'Directory',
+        ];
+    }
+
+    public function prepareTemplates(Engine $template, Injector $injector)
+    {
+        $template->addData([
+            'pages' => $this->getPages(),
+        ]);
+
+        $template->setFileExtension('phtml');
     }
 }
