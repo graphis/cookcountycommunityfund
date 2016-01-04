@@ -1,10 +1,9 @@
-/* Move down content because we have a fixed navbar that is 50px tall */
-body {
-    padding-top: 3.2rem;
-}
-
 img {
     max-width: 100%;
+}
+
+.navbar {
+    margin-bottom: 0;
 }
 
 .container.board .row {
