@@ -4,6 +4,7 @@ namespace Northwoods\CCCF\Configuration;
 
 use Auryn\Injector;
 use League\Plates\Engine;
+use Northwoods\CCCF\Plates\DirectoryExtension;
 use Spark\Configuration\ConfigurationInterface;
 
 class PlatesConfiguration implements ConfigurationInterface
@@ -24,6 +25,8 @@ class PlatesConfiguration implements ConfigurationInterface
         ]);
 
         $template->setFileExtension('phtml');
+
+        $template->loadExtension(new DirectoryExtension);
     }
 
     protected function getPages()

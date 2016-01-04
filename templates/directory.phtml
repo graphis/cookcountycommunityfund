@@ -10,5 +10,24 @@
 <?php $this->stop() ?>
 
 <div class="container">
-    <p><em>Directory coming soon.</em></p>
+    <table id="directory" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php foreach ($directory as $row): ?>
+            <tr>
+                <td><?= $this->directory()->name($row) ?></td>
+                <td><?= $this->directory()->address($row) ?></td>
+                <td><?= $this->directory()->phone($row) ?></td>
+                <td><?= $this->directory()->email($row) ?></td>
+            </tr>
+        <?php endforeach ?>
+        </tbody>
+    </table>
 </div>

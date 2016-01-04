@@ -11,7 +11,9 @@
     ],
     "require": {
         "sparkphp/spark": "~0.16",
-        "league/plates": "^3.1"
+        "league/plates": "^3.1",
+        "guzzlehttp/guzzle": "^6.1",
+        "josegonzalez/dotenv": "^1.2"
     },
     "autoload": {
         "psr-4": {

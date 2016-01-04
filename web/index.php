@@ -13,11 +13,13 @@ Spark\Application::build()
 ->setConfiguration([
     Spark\Configuration\AurynConfiguration::class,
     Spark\Configuration\DiactorosConfiguration::class,
+    Spark\Configuration\EnvConfiguration::class,
     Spark\Configuration\PayloadConfiguration::class,
     Spark\Configuration\PlatesResponderConfiguration::class,
     Spark\Configuration\RelayConfiguration::class,
     Spark\Configuration\WhoopsConfiguration::class,
     // ...
+    Northwoods\CCCF\Configuration\GuzzleConfiguration::class,
     Northwoods\CCCF\Configuration\PlatesConfiguration::class,
 ])
 ->setMiddleware([
