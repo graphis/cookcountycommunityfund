@@ -1,5 +1,12 @@
 <?php
 
+if (PHP_SAPI === 'cli-server') {
+    $ext = pathinfo($_SERVER['REQUEST_URI'], PATHINFO_EXTENSION);
+    if ($ext && $ext !== 'php') {
+        return false;
+    }
+}
+
 require __DIR__ . '/../vendor/autoload.php';
 
 Spark\Application::build()
