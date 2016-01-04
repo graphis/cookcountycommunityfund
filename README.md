@@ -11,5 +11,8 @@ GPLv3 License.
 
 ```sh
 composer install
+sudo chgrp _www cache
+sudo chmod 0775 cache
+cp example.env .env
+$EDITOR .env
 ```
-
