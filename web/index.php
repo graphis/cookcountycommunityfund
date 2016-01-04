@@ -11,13 +11,14 @@ require __DIR__ . '/../vendor/autoload.php';
 
 Spark\Application::build()
 ->setConfiguration([
-    Northwoods\CCCF\Configuration::class,
     Spark\Configuration\AurynConfiguration::class,
     Spark\Configuration\DiactorosConfiguration::class,
     Spark\Configuration\PayloadConfiguration::class,
     Spark\Configuration\PlatesResponderConfiguration::class,
     Spark\Configuration\RelayConfiguration::class,
     Spark\Configuration\WhoopsConfiguration::class,
+    // ...
+    Northwoods\CCCF\Configuration\PlatesConfiguration::class,
 ])
 ->setMiddleware([
     Relay\Middleware\ResponseSender::class,
