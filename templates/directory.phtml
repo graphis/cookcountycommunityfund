@@ -4,19 +4,19 @@
 
 <div class="container">
     <h1>Non-profit Directory</h1>
-    <p>The following directory of non-profits is made possible by a partnership with the <a href="http://cookcountychamber.org/">Cook County Chamber of Commerace</a>.</p>
+    <p>The following directory of non-profits is made possible by a partnership with the
+        <a href="http://cookcountychamber.org/" target="_blank">Cook County Chamber of Commerace</a>.</p>
 </div>
 
 <?php $this->stop() ?>
 
-<div class="container">
+<div class="container directory">
     <table id="directory" class="table table-striped">
         <thead>
             <tr>
                 <th>Name</th>
                 <th>Address</th>
-                <th>Phone Number</th>
-                <th>Email</th>
+                <th>Contact</th>
             </tr>
         </thead>
         <tbody>
@@ -24,8 +24,13 @@
             <tr>
                 <td><?= $this->directory()->name($row) ?></td>
                 <td><?= $this->directory()->address($row) ?></td>
-                <td><?= $this->directory()->phone($row) ?></td>
-                <td><?= $this->directory()->email($row) ?></td>
+                <td><?=
+                    implode('<br>', array_filter([
+                        $this->directory()->contact($row),
+                        $this->directory()->email($row),
+                        $this->directory()->phone($row)
+                    ])) ?>
+                </td>
             </tr>
         <?php endforeach ?>
         </tbody>

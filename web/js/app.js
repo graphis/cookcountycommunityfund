@@ -1,3 +1,5 @@
 jQuery(function($) {
-    $('#directory').DataTable();
+    $('#directory').DataTable({
+        ordering: false
+    });
 });

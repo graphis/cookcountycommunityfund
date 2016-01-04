@@ -44,15 +44,49 @@ class DirectoryExtension implements ExtensionInterface
         return sprintf('<address>%s</address>', $address);
     }
 
+    public function contact(array $row)
+    {
+        if (empty($row['contact_firstname'])) {
+            return '';
+        }
+
+        if (strpos($row['contact_firstname'], ',') !== false) {
+            $names = array_combine(
+                preg_split('/,\s*/', $row['contact_firstname']),
+                preg_split('/,\s*/', $row['contact_lastname'])
+            );
+
+            $contacts = [];
+            foreach ($names as $contact_firstname => $contact_lastname) {
+                $contacts[] = $this->contact(compact('contact_firstname', 'contact_lastname'));
+            }
+            return implode(' <br>', $contacts);
+        }
+
+        $contact = trim(sprintf(
+            '%s %s',
+            $row['contact_firstname'],
+            $row['contact_lastname']
+        ));
+
+        return $this->escape($contact);
+    }
+
     public function phone(array $row)
     {
-        return preg_split('/;\s*/', $row['phone'])[0];
+        if (empty($row['phone'])) {
+            return '';
+        }
+
+        $numbers = preg_split('/;\s*/', $row['phone']);
+
+        return $this->escape($numbers[0]);
     }
 
     public function email(array $row)
     {
         if (empty($row['email']) || strpos($row['email'], '@') === false) {
-            return $this->none();
+            return '';
         }
 
         $email = $this->escape($row['email']);
@@ -69,11 +103,6 @@ class DirectoryExtension implements ExtensionInterface
         return htmlspecialchars($str, ENT_HTML5);
     }
 
-    private function none()
-    {
-        return '<em class="text-muted">&mdash;</em>';
-    }
-
     private function link($name, $link)
     {
         return sprintf(
@@ -81,5 +110,10 @@ class DirectoryExtension implements ExtensionInterface
             $this->escape($link),
             $name
         );
+    }
+
+    private function none()
+    {
+        return '<em class="text-muted">&mdash;</em>';
     }
 }
