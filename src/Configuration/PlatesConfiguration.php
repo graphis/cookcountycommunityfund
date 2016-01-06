@@ -5,7 +5,7 @@ namespace Northwoods\CCCF\Configuration;
 use Auryn\Injector;
 use League\Plates\Engine;
 use Northwoods\CCCF\Plates\DirectoryExtension;
-use Spark\Configuration\ConfigurationInterface;
+use Equip\Configuration\ConfigurationInterface;
 
 class PlatesConfiguration implements ConfigurationInterface
 {

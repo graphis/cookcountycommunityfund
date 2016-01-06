@@ -2,8 +2,8 @@
 
 namespace Northwoods\CCCF\Domain;
 
-use Spark\Adr\DomainInterface;
-use Spark\Payload;
+use Equip\Adr\DomainInterface;
+use Equip\Payload;
 
 abstract class Domain implements DomainInterface
 {

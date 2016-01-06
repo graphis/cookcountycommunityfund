@@ -9,8 +9,8 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Psr7;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use Spark\Configuration\ConfigurationInterface;
-use Spark\Env;
+use Equip\Configuration\ConfigurationInterface;
+use Equip\Env;
 
 class GuzzleConfiguration implements ConfigurationInterface
 {
@@ -25,15 +25,15 @@ class GuzzleConfiguration implements ConfigurationInterface
 
     public function apply(Injector $injector)
     {
-        if (empty($this->env['chamber_api_secret'])) {
-            throw new \DomainException('Bad API configuration');
-        }
-
         $injector->delegate(Client::class, [$this, 'makeClient']);
     }
 
     public function makeClient(Injector $injector)
     {
+        if (empty($this->env['chamber_api_secret'])) {
+            throw new \DomainException('Bad API configuration');
+        }
+
         $handler = $injector->execute([$this, 'makeStack']);
         return new Client(compact('handler'));
     }

@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "sparkphp/spark": "~0.16",
+        "equip/framework": "^1.0",
         "league/plates": "^3.1",
         "guzzlehttp/guzzle": "^6.1",
         "josegonzalez/dotenv": "^1.2"

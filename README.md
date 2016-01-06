@@ -2,7 +2,7 @@
 
 Information about the CCCF and a directory of non-profits in Cook County, Minnesota.
 
-Built using [Bootstrap](http://getbootstrap.com/) and [Spark](http://sparkphp.github.io/).
+Built using [Bootstrap](http://getbootstrap.com/) and [Equip](http://equip.github.io/).
 
 GPLv3 License.
 

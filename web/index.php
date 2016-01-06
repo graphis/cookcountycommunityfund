@@ -9,27 +9,27 @@ if (PHP_SAPI === 'cli-server') {
 
 require __DIR__ . '/../vendor/autoload.php';
 
-Spark\Application::build()
+Equip\Application::build()
 ->setConfiguration([
-    Spark\Configuration\AurynConfiguration::class,
-    Spark\Configuration\DiactorosConfiguration::class,
-    Spark\Configuration\EnvConfiguration::class,
-    Spark\Configuration\PayloadConfiguration::class,
-    Spark\Configuration\PlatesResponderConfiguration::class,
-    Spark\Configuration\RelayConfiguration::class,
-    Spark\Configuration\WhoopsConfiguration::class,
+    Equip\Configuration\AurynConfiguration::class,
+    Equip\Configuration\DiactorosConfiguration::class,
+    Equip\Configuration\EnvConfiguration::class,
+    Equip\Configuration\PayloadConfiguration::class,
+    Equip\Configuration\PlatesResponderConfiguration::class,
+    Equip\Configuration\RelayConfiguration::class,
+    Equip\Configuration\WhoopsConfiguration::class,
     // ...
     Northwoods\CCCF\Configuration\GuzzleConfiguration::class,
     Northwoods\CCCF\Configuration\PlatesConfiguration::class,
 ])
 ->setMiddleware([
     Relay\Middleware\ResponseSender::class,
-    Spark\Handler\ExceptionHandler::class,
-    Spark\Handler\DispatchHandler::class,
-    Spark\Handler\FormContentHandler::class,
-    Spark\Handler\ActionHandler::class,
+    Equip\Handler\ExceptionHandler::class,
+    Equip\Handler\DispatchHandler::class,
+    Equip\Handler\FormContentHandler::class,
+    Equip\Handler\ActionHandler::class,
 ])
-->setRouting(function (Spark\Directory $directory) {
+->setRouting(function (Equip\Directory $directory) {
     return $directory
     ->get('/[about]', 'Northwoods\CCCF\Domain\About')
     ->get('/board', 'Northwoods\CCCF\Domain\Board')
